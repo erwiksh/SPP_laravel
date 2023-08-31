@@ -57,5 +57,5 @@ Pembayaran SPP
 @endsection
 
 @section('as')
-Sebagai Admin
+Sebagai Adminn
 @endsection
