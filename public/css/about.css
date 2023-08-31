@@ -1,0 +1,35 @@
+/* Reset default margin and padding for better layout control */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the image */
+img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+/* Add scaling effect on hover */
+img:hover {
+    transform: scale(1.1); /* Scale the image by 110% */
+}
+
+/* Style for the paragraph */
+p {
+    text-align: center; /* Center-align the text */
+    font-size: 18px;
+    margin-top: 20px; /* Add some space between image and paragraph */
+    line-height: 1.5;
+}
+
+/* Optional: Style for the heading */
+h1 {
+    text-align: center; /* Center-align the heading */
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}

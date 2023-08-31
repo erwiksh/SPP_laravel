@@ -1,0 +1,174 @@
+body{
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.card-siswa {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 300px;
+    height: 352px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px 10px 20px; /* Atas Kanan Bawah Kiri */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-button {
+    width: 367px;
+    height: 60px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+
+.custom-button:hover {
+    background-color: #141E61;
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Jarak antara content dan gambar */
+}
+
+.logo-major {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.major {
+    margin-left: 10px; /* Jarak antara logo dan teks major */
+    font-size: 15px;
+}
+
+.image-container-siswa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.image-siswa {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-bottom: 80px;
+}
+
+.name {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.button-container {
+    margin-top: 120px; /* Ruang di antara tombol dan konten navbar */
+    display: flex;
+    justify-content: center; /* Memusatkan konten horizontal */
+    align-items: center; /* Memusatkan konten vertical */
+    margin-top: 20px; /* Atur jarak atas */
+}
+
+/* Set panjang, lebar, warna latar belakang, dan border */
+.btn-element {
+    width: 400px;
+    height: 70px;
+    background-color: #D9D9D9; /* Warna latar belakang (blue) */
+    color: black; /* Warna teks (putih) */
+    border: 2px solid #D9D9D9; /* Border dengan warna yang sama */
+    border-radius: 15px; /* Sudut melengkung pada border */
+    margin: 23px 0; /* Atur jarak vertikal antara tombol */
+
+}
+
+/* Efek hover saat kursor diarahkan ke tombol */
+.btn-element:hover {
+    background-color: #141E61; /* Warna latar belakang (blue) saat hover */
+    color: white; /* Border dengan warna yang sama saat hover */
+}
+
+/* Set posisi tulisan menjadi di bawah dan di pojok kiri */
+/* Set posisi tulisan menjadi di bawah dan di pojok kiri */
+h3 {
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-right: 30px;
+    color: #D9D9D9;
+    font-size: 20px;
+}
+
+.bordered-table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    border: 2px solid white;
+}
+
+.bordered-table th,
+.bordered-table td {
+    border: 2px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+.bordered-table th {
+    background-color: #787A91;
+    color: white;
+    font-weight: normal;
+}
+
+.bordered-table tbody tr {
+    background-color: #D9D9D9; /* Warna latar belakang untuk semua baris tbody */
+    color: black; /* Warna teks pada baris tbody */
+}
+
+
+.pagination-container {
+    margin-top: 10px;
+    margin-left: 204px;
+}
+
+.pagination-container .page-item .page-link[aria-label="Next"],
+.pagination-container .page-item .page-link[aria-label="Previous"] {
+    background-color: #141E61; /* Ubah warna latar belakang tombol menjadi biru */
+    color: white; /* Ubah warna teks tombol menjadi putih */
+    border-color: #141E61; /* Ubah warna border tombol menjadi biru (opsional) */
+}
+
+.pagination-container .page-item .page-link:not([aria-label]) {
+    background-color: #D9D9D9; /* Ubah warna latar belakang tombol angka menjadi merah */
+    color: black; /* Ubah warna teks tombol angka menjadi putih */
+    border-color: #D9D9D9; /* Ubah warna border tombol angka menjadi merah (opsional) */
+}
+
+
+.table-button {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 205px;
+    margin-right: 205px;
+    margin-bottom: 10px; /* Atur margin bawah sesuai kebutuhan */
+}
+
+
+
+
+
