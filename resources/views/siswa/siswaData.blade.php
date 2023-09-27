@@ -8,7 +8,7 @@ Detail Pembayaran
     <!-- Table -->
     <table class="bordered-table">
         <thead>
-          <tr>
+            <tr>
                 <th>Bulan</th>
                 <th>Detail Pembayaran</th>
                 <th>Tanggal Pembayaran</th>
@@ -16,14 +16,14 @@ Detail Pembayaran
             </tr>
         </thead>
         <tbody>
-        @foreach ($datas as $data)
+            @foreach ($datas as $data)
             <tr>
                 <td scope="data">{{ $data->bulan }}</td>
                 <td scope="data">{{ $data->detailPembayaran }}</td>
                 <td scope="data">{{ $data->tanggalPembayaran }}</td>
                 <td scope="data">{{ $data->status }}</td>
             </tr>
-          @endforeach
+            @endforeach
         </tbody>
     </table>
     <!-- End Table -->

@@ -6,17 +6,17 @@ Pembayaran SPP
 @section('siswa') 
 <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6">
-        <h2>Form Tambahkan Data</h2>
-        <form action="{{ route('insertData') }}" method="POST" enctype="multipart/form-data">
+      <div class="col">
+        <h2>Form Update Data</h2>
+        <form action="{{ route('updateData',$data->id) }}" method="POST" enctype="multipart/form-data">
           @csrf
          <div class="form-group">
             <label for="nama" >Nama:</label>
-            <input name="name" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+            <input name="name" class="form-control" id="nama" placeholder="Masukkan Nama" value="{{ $data->name }}" required>
           </div>
           <div class="form-group">
             <label for="class" class="mt-3">Kelas:</label>
-            <select class="form-control" id="class" name="class" required>
+            <select class="form-control" id="class" name="class" value="{{ $data->class }}"> 
               <option value="X RPL">X RPL</option>
               <option value="XI RPL">XI RPL</option>
               <option value="XII RPL">XII RPL</option>
@@ -45,32 +45,12 @@ Pembayaran SPP
           </div>
           <div class="form-group">
             <label for="biaya" class="mt-3">Biaya:</label>
-            <input type="text" class="form-control" id="biaya" placeholder="Masukkan biaya" name="sum" required>
+            <input type="text" class="form-control" id="biaya" placeholder="Masukkan biaya" name="sum" value="{{ $data->sum }}" required>
           </div>
-          <button type="submit" class="btn btn-primary mt-4">Tambahkan Data</button>
+          <button type="submit" class="btn btn-primary mt-4">Update Data</button>
         </form>
       </div>
-      <div class="col-md-6">
-        <div class="col-md-6 offset-md-3">
-            <!-- Gambar siswa -->
-            <div class="card-siswa">
-                <div class="content">
-                    <div class="logo-major">
-                        <img class="logo" src="img/Logo-rpl.jpeg" alt="Logo">
-                    </div>
-                    <div class="major">
-                        Software And Development
-                    </div>
-                </div>
-                <div class="image-container-siswa">
-                    <img class="image-siswa" src="img/Logo-eci.jpg" alt="Card Image">
-                </div>
-                <div class="name">
-                    Erwiyana
-                </div>
-            </div>  
-        </div>
-      </div>
+    
     </div>
 </div>
 
@@ -79,5 +59,13 @@ Pembayaran SPP
 @endsection
 
 @section('as')
-Sebagai Adminn
+<style>
+  .visually {
+      color: rgb(192, 192, 192); /* Ganti warna teks sesuai keinginan Anda, misalnya abu-abu */
+      float: right; /* Membuat teks berada di pojok kiri */
+      margin: 40px
+  }
+</style>
+<h2 class="visually">Sebagai Admin</h2>
+
 @endsection

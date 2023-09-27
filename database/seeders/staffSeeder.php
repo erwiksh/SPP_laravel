@@ -16,8 +16,7 @@ class staffSeeder extends Seeder
     {
         DB::table('staff')->insert([
             'name'=>'erwiyana',
-            'major'=>'RPL',
-            'class'=>'XII',
+            'class'=>'XII RPL',
             'paymentDate'=>'2023-07-17',
             'sum'=>'60000'
         ]);

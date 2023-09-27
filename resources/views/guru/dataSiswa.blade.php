@@ -1,12 +1,13 @@
 @extends('layout.spp')
 @section('navSiswa')
-Pembayaran SPP
+Data Seluruh Siswa
 @endsection
 @section('siswa') 
 
+
 <div class="table-container">
     <div class="table-button d-flex justify-content-between">
-        <a href="#" class="btn btn-primary">Tambah Data</a>
+        <a href="{{ url('/add') }}" class="btn btn-primary">Tambah Data</a>
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">
@@ -15,6 +16,12 @@ Pembayaran SPP
         </form>
         
     </div>
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success" role="alert">
+        {{ $message }}
+    </div>
+        
+    @endif
 
     <!-- Table -->
     <table class="bordered-table">
@@ -22,9 +29,9 @@ Pembayaran SPP
             <tr>
                 <th>Nama Siswa</th>
                 <th>Kelas</th>
-                <th>Jurusan</th>
                 <th>Tanggal Pembayaran</th>
                 <th>Jumlah</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -33,9 +40,14 @@ Pembayaran SPP
                 <tr>
                     <td scope="data">{{ $d->name }}</td>
                     <td scope="data">{{ $d->class }}</td>
-                    <td scope="data">{{ $d->major }}</td>
-                    <td scope="data">{{ $d->paymentDate }}</td>
+                    <td scope="data">{{ $d->created_at->format('D-M-Y') }}</td>
                     <td scope="data">{{ $d->sum }}</td>
+                    <td>
+                            <a href="{{ route('update', ['id' => $d->id]) }}" class="btn btn-primary">Ubah</a>
+                            <a href="{{ route('delete', ['id' => $d->id]) }}" class="btn btn-danger" onclick="return confirm('Apakah benar kamu ingin menghapus data ini?')">Hapus</a>
+
+
+                    </td>
                 </tr>
                @endforeach
         

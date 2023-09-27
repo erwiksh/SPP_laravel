@@ -16,20 +16,39 @@ class CreateStaffTable extends Migration
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('major',[
-                'RPL',
-                'TKJ',
-                'MPLB',
-                'PM',
-                'AKL'
-            ]);
             $table->enum('class',[
-                'X ',
-                'XI ',
-                'XII '
+                'X RPL',
+                'XI RPL',
+                'XII RPL',
+                'X TKJ 1',
+                'XI TKJ 1',
+                'XII TKJ 1',
+                'X TKJ 2',
+                'XI TKJ 2',
+                'XII TKJ 2',
+                'X MPLB 1',
+                'XI MPLB 1',
+                'XII MPLB 1',
+                'X MPLB 2',
+                'XI MPLB 2',
+                'XII MPLB 2',
+                'X PM 1',
+                'XI PM 1',
+                'XII PM 1',
+                'X PM 2',
+                'XI PM 2',
+                'XII PM 2',
+                'X AKL 1',
+                'XI AKL 1',
+                'XII AKL 1',
+                'X AKL 2',
+                'XI AKL 2',
+                'XII AKL 2',
+                'X AKL 3',
+                'XI AKL 3',
+                'XII AKL 3'
             ]);
-            $table->timestamp('paymentDate');
-            $table->bigInteger('sum');
+            $table->char('sum');
             $table->timestamps();
         });
     }

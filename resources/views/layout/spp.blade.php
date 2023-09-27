@@ -41,7 +41,7 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <div class="mt-auto d-flex justify-content-end">
-                    <a class="nav-link" href="{{ url('/login') }}">
+                    <a class="nav-link" href="{{ url('/logout') }}">
                         Logout
                     </a>
                 </div>
